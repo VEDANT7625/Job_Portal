@@ -63,8 +63,9 @@ A fully functional job portal web application built with **ASP.NET Web Forms**, 
 ## 📸 Screenshots
 
 ![Screenshot 2025-05-04 205717](https://github.com/user-attachments/assets/22dd5a26-75ed-4770-914d-b23af93c974a)
+![Screenshot 2025-05-04 205717](https://github.com/user-attachments/assets/9f32df36-5ebd-4a0f-b64a-79a0f72934d3)
 ![Screenshot 2025-05-04 205830](https://github.com/user-attachments/assets/bb813040-c883-4151-8174-c7e3bf1eaa3c)
-![Screenshot 2025-05-04 205830](https://github.com/user-attachments/assets/621c7fe7-4534-4a64-9c43-3e4f3cb54529)
+
 
 ---
 

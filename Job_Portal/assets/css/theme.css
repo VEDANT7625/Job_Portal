@@ -1,0 +1,86 @@
+﻿.wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #7b1fa2;
+    color: white;
+    position: relative;
+}
+
+    .sidebar .sidebar_inner {
+        padding: 20px 0;
+    }
+
+    .sidebar .profile_info {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+        .sidebar .profile_info .name {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+.sidebar_menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .sidebar_menu li {
+        padding: 15px 20px;
+        transition: 0.3s;
+    }
+
+        .sidebar_menu li.active,
+        .sidebar_menu li:hover {
+            background-color: #4a0072;
+            cursor: pointer;
+        }
+
+        .sidebar_menu li a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar_menu li .icon {
+            margin-right: 10px;
+        }
+
+.logout_btn {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+    .logout_btn a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+.main_container {
+    flex-grow: 1;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff 60%, #cccccc);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #6a1b9a;
+}

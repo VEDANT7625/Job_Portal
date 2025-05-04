@@ -1,0 +1,217 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="JobSeeker.Master.cs" Inherits="Job_Portal.JobSeeker.JobSeeker" %>
+
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Online Job Portal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/price_rangs.css">
+    <link rel="stylesheet" href="../assets/css/flaticon.css">
+    <link rel="stylesheet" href="../assets/css/slicknav.css">
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/css/themify-icons.css">
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+
+
+<body>
+    <form id="form1" runat="server">
+        <!-- ✅ Hidden labels to fix CS0103 -->
+        <asp:Label ID="lblRelatedToProfile" runat="server" Visible="false" />
+        <asp:Label ID="lblJobSeekerId" runat="server" Visible="false" />
+
+        <div id="preloader-active">
+            <div class="preloader d-flex align-items-center justify-content-center">
+                <div class="preloader-inner position-relative">
+                    <div class="preloader-circle"></div>
+                    <div class="preloader-img pere-text">
+                        <img src="../assets/img/logo/logo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header>
+            <div class="header-area header-transparrent">
+                <div class="headder-top header-sticky">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-3 col-md-2">
+                                <div class="logo">
+                                    <a href="Index.aspx">
+                                        <img src="../assets/img/logo/logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-md-10">
+                                <div class="menu-wrapper d-flex justify-content-between align-items-center">
+                                    <div class="main-menu">
+                                        <nav class="d-none d-lg-block">
+                                            <ul id="navigation">
+                                                <li><a href="Index.aspx">Home</a></li>
+                                                <li><a href="Job_Listing.aspx">Find a Jobs</a></li>
+                                                <li><a href="ResumeBuild.aspx">Build Your Resume</a></li>
+                                                <li><a href="Contact.aspx">Contact</a></li>
+                                                <li><a href="GenerateResume.aspx">Resume</a></li>
+                                                </ul>
+                                    </div>
+                                    <div class="header-btn d-none d-lg-flex gap-2">
+                                        <asp:LinkButton ID="lbRegisterOrProfile" runat="server" CssClass="btn head-btn1"
+                                            OnClick="lbRegisterOrProfile_Click" CausesValidation="false" Text="Profile" />
+                                        <asp:LinkButton ID="lbLoginOrLogout" runat="server" CssClass="btn head-btn2"
+                                            OnClick="lbLoginOrLogout_Click" CausesValidation="false" Text="Logout" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+
+        <footer>
+            <div class="footer-area footer-bg footer-padding">
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>About Us</h4>
+                                    <div class="footer-pera">
+                                        <p>Heaven fruitful doesn't cover lesser days. Appear creeping seasons so behold.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Contact Info</h4>
+                                    <ul>
+                                        <li>
+                                            <p>Address: Your address goes here, your demo address.</p>
+                                        </li>
+                                        <li><a href="#">Phone: +8880 44338899</a></li>
+                                        <li><a href="#">Email: info@colorlib.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-form">
+                            <div id="mc_embed_signup">
+                                <div class="form-icon"></div>
+                                <div class="mt-10 info"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-area footer-bg">
+                <div class="container">
+                    <div class="row footer-wejed justify-content-between align-items-center py-4">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-md-0">
+                            <div class="footer-logo">
+                                <a href="index.aspx">
+                                    <img src="../assets/img/logo/logo2_footer.png" alt="Logo" class="img-fluid" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-md-0 text-center">
+                            <div class="footer-tittle-bottom">
+                                <span class="d-block h4">5000+</span>
+                                <p>Talented Hunters</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-4 mb-md-0 text-center">
+                            <div class="footer-tittle-bottom">
+                                <span class="d-block h4">451</span>
+                                <p>Companies Registered</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 text-center">
+                            <div class="footer-tittle-bottom">
+                                <span class="d-block h4">568</span>
+                                <p>Jobs Posted</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-area footer-bg">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col-xl-10 col-lg-10"></div>
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="footer-social f-right">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fab fa-behance"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- JS here -->
+
+        <!-- All JS Custom Plugins Link Here here -->
+        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <!-- Jquery, Popper, Bootstrap -->
+        <script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <!-- Jquery Mobile Menu -->
+        <script src="../assets/js/jquery.slicknav.min.js"></script>
+
+        <!-- Jquery Slick , Owl-Carousel Range -->
+        <script src="../assets/js/owl.carousel.min.js"></script>
+        <script src="../assets/js/slick.min.js"></script>
+        <script src="../assets/js/price_rangs.js"></script>
+        <!-- One Page, Animated-HeadLin -->
+        <script src="../assets/js/wow.min.js"></script>
+        <script src="../assets/js/animated.headline.js"></script>
+        <script src="../assets/js/jquery.magnific-popup.js"></script>
+
+        <!-- Scrollup, nice-select, sticky -->
+        <script src="../assets/js/jquery.scrollUp.min.js"></script>
+        <script src="../assets/js/jquery.nice-select.min.js"></script>
+        <script src="../assets/js/jquery.sticky.js"></script>
+
+        <!-- contact js -->
+        <script src="../assets/js/contact.js"></script>
+        <script src="../assets/js/jquery.form.js"></script>
+        <script src="../assets/js/jquery.validate.min.js"></script>
+        <script src="../assets/js/mail-script.js"></script>
+        <script src="../assets/js/jquery.ajaxchimp.min.js"></script>
+
+        <!-- Jquery Plugins, main Jquery -->
+        <script src="../assets/js/plugins.js"></script>
+        <script src="../assets/js/main.js"></script>
+    </form>
+</body>
+</html>
